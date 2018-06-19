@@ -1,4 +1,4 @@
-#WebdriverIO Test
+# WebdriverIO Test
 
 Tests done using [WebdriverIO](http://webdriver.io/guide.html). Since WebdriverIO supports tests via it's integrated test suite (supports Mocha, Jasmine and Cucumber) as well as in standalone (supports all testing frameworks), tests were made in both modes for comparison.
 
