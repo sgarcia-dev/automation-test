@@ -4,7 +4,9 @@ const puppeteer = require('puppeteer');
 let BROWSER, PAGE;
 
 beforeEach(async () => {
-    BROWSER = await puppeteer.launch();
+    BROWSER = await puppeteer.launch({
+        headless: false
+    });
     PAGE = await BROWSER.newPage();
 });
 
@@ -16,7 +18,7 @@ test('Google search result for Puppeteer should return correct title.', async ()
     await PAGE.screenshot({ path: 'google.test.png' });
     const title = await PAGE.title();
     expect(title).toBe('Puppeteer - Google Search');
-});
+}, 16000);
 
 afterEach(async () => {
     await BROWSER.close();
