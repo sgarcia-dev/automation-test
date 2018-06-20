@@ -46,7 +46,7 @@ module.exports = {
         }),
         "chrome_grid": Object.assign(BASE_ENV, {
             "selenium_port": 4444,
-            "selenium_host": "10.38.102.191",
+            "selenium_host": "10.38.101.211",
             "desiredCapabilities": {
                 "browserName": "chrome",
                 "javascriptEnabled": true,
