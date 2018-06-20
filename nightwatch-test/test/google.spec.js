@@ -5,7 +5,7 @@ module.exports = {
       .waitForElementVisible('body')
       .setValue('input[name=q]', 'nightwatch')
       .click('input[value="Google Search"]')
-      .pause(2000)
+      .pause(5000)
       .assert.title('nightwatch - Google Search')
       .end();
   }
