@@ -43,6 +43,18 @@ module.exports = {
                 "browserName": "chrome",
                 "javascriptEnabled": true // turn off to test progressive enhancement
             }
+        }),
+        "chrome_grid": Object.assign(BASE_ENV, {
+            "selenium_port": 4444,
+            "selenium_host": "10.38.102.191",
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+                "chromeOptions": {
+                    "args": ["--no-sandbox", "disable-web-security"]
+                }
+            }
         })
     }
 }
