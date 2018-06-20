@@ -1,7 +1,3 @@
-// NIGHTWATCH (Mocha Only)
-
-var config = require('../nightwatch.conf.js');
-
 module.exports = {
   'Google can be accessed.': function(browser) {
     browser
@@ -9,9 +5,8 @@ module.exports = {
       .waitForElementVisible('body')
       .setValue('input[name=q]', 'nightwatch')
       .click('input[value="Google Search"]')
-      .pause(1000)
+      .pause(2000)
       .assert.title('nightwatch - Google Search')
-      .saveScreenshot('google.spec.png')
       .end();
   }
 };
